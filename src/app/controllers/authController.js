@@ -119,7 +119,7 @@ router.post('/reset_password', async (req, res) => {
         const now = new Date();
 
         if (now > user.passwordResetExpires) {
-            return res.status(400).send({ error: 'Token expirado, gere outro'});
+            return res.status(400).send({ error: 'Token expirado, gere outro!'});
         }
 
         user.password = password;
